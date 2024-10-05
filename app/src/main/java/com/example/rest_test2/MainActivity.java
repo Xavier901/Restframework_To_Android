@@ -12,7 +12,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    Button Posts_btn;
+    Button Postslist_btn,PostRequest_btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,13 +23,21 @@ public class MainActivity extends AppCompatActivity {
 //            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
 //            return insets;
 //        });
-    Posts_btn=(Button) findViewById(R.id.Posts);
+    Postslist_btn=(Button) findViewById(R.id.Posts);
 
-    Posts_btn.setOnClickListener(new View.OnClickListener() {
+    Postslist_btn.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
             Intent intent=new Intent(MainActivity.this,Posts_Activity.class);
             startActivity(intent);
+        }
+    });
+
+    PostRequest_btn.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+        Intent intent=new Intent(MainActivity.this,PostRequest_Activity.class);
+        startActivity(intent);
         }
     });
 
